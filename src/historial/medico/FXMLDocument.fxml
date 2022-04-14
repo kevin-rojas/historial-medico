@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="historial.medico.FXMLDocumentController">
+    <children>
+      <TextField fx:id="dniTF" layoutX="93.0" layoutY="63.0" />
+      <Label layoutX="55.0" layoutY="68.0" text="DNI" />
+      <DatePicker fx:id="fechaNacimientoDT" layoutX="464.0" layoutY="71.0" prefHeight="26.0" prefWidth="129.0" />
+      <Label layoutX="327.0" layoutY="77.0" text="FECHA  NACIMIENTO" />
+      <Label layoutX="55.0" layoutY="121.0" text="NOMBRE " />
+      <TextField fx:id="nombreTF" layoutX="122.0" layoutY="114.0" />
+      <Label layoutX="327.0" layoutY="135.0" text="APELLIDO" />
+      <TextField fx:id="apelllidoTF" layoutX="404.0" layoutY="128.0" />
+      <TableView fx:id="tvTabla" layoutX="50.0" layoutY="232.0" prefHeight="239.0" prefWidth="745.0">
+        <columns>
+          <TableColumn fx:id="dniTabla" prefWidth="75.0" text="DNI" />
+            <TableColumn fx:id="fechaNTabla" prefWidth="133.0" text="FECHANACIMIENTO" />
+            <TableColumn fx:id="nombreTabla" prefWidth="187.0" text="NOMBRE" />
+            <TableColumn fx:id="apellidoTabla" prefWidth="214.0" text="APELLIDO" />
+            <TableColumn fx:id="AtencionTabla" prefWidth="135.0" text="ATENCIONES" />
+        </columns>
+      </TableView>
+      <Button fx:id="agregarbtn" layoutX="604.0" layoutY="128.0" mnemonicParsing="false" onAction="#agregar" text="AGREGAR" />
+      <TextField fx:id="buscarTexfield" layoutX="203.0" layoutY="192.0" prefHeight="26.0" prefWidth="305.0" />
+      <Button fx:id="buscarBtn" layoutX="122.0" layoutY="193.0" mnemonicParsing="false" onAction="#buscar" text="BUSCAR" />
+    </children>
+</AnchorPane>
